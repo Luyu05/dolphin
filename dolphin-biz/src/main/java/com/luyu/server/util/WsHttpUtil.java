@@ -23,6 +23,7 @@ import java.util.Map;
  * Created by luyu on 2019/7/9.
  */
 public class WsHttpUtil {
+
     public static void sendHttpResponse(ChannelHandlerContext ctx,
                                         FullHttpRequest req, FullHttpResponse res) {
         // 返回应答给客户端

@@ -11,7 +11,7 @@
     <modules>
         <module>dolphin-api</module>
         <module>dolphin-biz</module>
-        <module>dolphin-final-service</module>
+        <module>dolphin-service</module>
     </modules>
 
     <properties>
