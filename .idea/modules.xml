@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dolphin-api/dolphin-api.iml" filepath="$PROJECT_DIR$/dolphin-api/dolphin-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dolphin-biz/dolphin-biz.iml" filepath="$PROJECT_DIR$/dolphin-biz/dolphin-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dolphin-final-service/dolphin-final-service.iml" filepath="$PROJECT_DIR$/dolphin-final-service/dolphin-final-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dolphin-parent.iml" filepath="$PROJECT_DIR$/dolphin-parent.iml" />
+    </modules>
+  </component>
+</project>

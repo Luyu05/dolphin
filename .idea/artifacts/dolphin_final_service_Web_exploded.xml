@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="dolphin-final-service:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/dolphin_final_service_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="dolphin-final-service/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dolphin-final-service" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

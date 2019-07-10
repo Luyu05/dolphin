@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dolphin-final-service:war">
+    <output-path>$PROJECT_DIR$/dolphin-final-service/target</output-path>
+    <root id="archive" name="dolphin-final-service-qa-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="dolphin-final-service:war exploded" />
+    </root>
+  </artifact>
+</component>
