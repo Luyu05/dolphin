@@ -17,6 +17,7 @@ public class WsIdleStateHandler extends IdleStateHandler {
 
     public static WsIdleStateHandler instance = new WsIdleStateHandler();
 
+    //120s未收到客户端的消息，断开连接
     private WsIdleStateHandler() {
         super(120, 0, 0, TimeUnit.SECONDS);
     }

@@ -19,7 +19,7 @@ import com.luyu.server.handlers.WsReqHandler;
  * Created by luyu on 2019/7/9.
  */
 @Service
-public class WebsocketServer implements InitializingBean {
+public class WebSocketServer implements InitializingBean {
 
     public void afterPropertiesSet() throws Exception {
         start();

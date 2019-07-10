@@ -24,7 +24,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
  */
 public class HttpReqHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
-    private WebSocketServerHandshaker handshaker;
+    private WebSocketServerHandshaker handShaker;
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
@@ -48,14 +48,15 @@ public class HttpReqHandler extends SimpleChannelInboundHandler<FullHttpRequest>
         //ws 服务端主动握手
         WebSocketServerHandshakerFactory wsFactory = new WebSocketServerHandshakerFactory("ws://" +
                 msg.headers().get(HttpHeaderNames.HOST) + "/websocket", null, false);
-        handshaker = wsFactory.newHandshaker(msg);
-        if (null == handshaker) {
+        handShaker = wsFactory.newHandshaker(msg);
+        if (null == handShaker) {
             WebSocketServerHandshakerFactory.sendUnsupportedVersionResponse(ctx.channel());
             return;
         } else {
-            handshaker.handshake(ctx.channel(), msg);
+            handShaker.handshake(ctx.channel(), msg);
         }
-        ctx.channel().attr(AttributeKey.valueOf("WS_HAND_SHAKER")).set(handshaker);
+        //将后续handler需要的资源存放到channel上
+        ctx.channel().attr(AttributeKey.valueOf("WS_HAND_SHAKER")).set(handShaker);
         ctx.channel().attr(AttributeKey.valueOf("WS_GROUP_ID")).set(param.get("groupId").get(0));
         SessionUtil.bindChannelGroup(param.get("groupId").get(0), ctx.channel());
         //移除当前handler
@@ -64,6 +65,7 @@ public class HttpReqHandler extends SimpleChannelInboundHandler<FullHttpRequest>
         ctx.channel().pipeline().addFirst(WsIdleStateHandler.instance);
     }
 
+    //身份校验，自行实现逻辑
     private boolean isValid(List<String> list) {
         return true;
     }
